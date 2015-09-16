@@ -5,15 +5,15 @@ describe('toRna()', function() {
     expect(toRna('C')).toEqual('G');
   });
 
-  xit('transcribes guanine to cytosine', function() {
+  it('transcribes guanine to cytosine', function() {
     expect(toRna('G')).toEqual('C');
   });
 
-  xit('transcribes adenine to uracil', function() {
+  it('transcribes adenine to uracil', function() {
     expect(toRna('A')).toEqual('U');
   });
 
-  xit('transcribes thymine to adenine', function() {
+  it('transcribes thymine to adenine', function() {
     expect(toRna('T')).toEqual('A');
   });
 
