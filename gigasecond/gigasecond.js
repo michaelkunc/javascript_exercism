@@ -4,10 +4,7 @@ function Gigasecond(date) {
 
 Gigasecond.prototype.date = function() {
     var endDate =  new Date(this.startDate.getTime() + Math.pow(10, 12));
-    var year = endDate.getFullYear();
-    var month = endDate.getMonth();
-    var date = endDate.getDate();
-    return new Date(year, month, date);
+    return new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
 }
 
 module.exports = Gigasecond;
