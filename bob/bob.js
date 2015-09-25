@@ -3,18 +3,30 @@
 // convenience to get you started writing code faster.
 //
 
+
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
     if (input === input.toUpperCase() && /[a-z]/i.test(input)) {
-        return 'Whoa, chill out!'
-    } else if (input.slice(-1) == '?') {
-        return 'Sure.'
-    } else if (input.trim().length === 0){
-      return 'Fine. Be that way!'
-    } else {
-        return 'Whatever.'
+        return responses.chill;
     }
+
+    if (input.slice(-1) == '?') {
+        return responses.answer;
+    }
+
+    if (input.trim().length === 0){
+      return responses.silentTreatment;
+    }
+
+    return responses.whatever;
+};
+
+var responses = {
+  chill: 'Whoa, chill out!',
+  answer: 'Sure.',
+  silentTreatment: 'Fine. Be that way!',
+  whatever: 'Whatever.'
 };
 
 module.exports = Bob;
