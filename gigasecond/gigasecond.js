@@ -3,8 +3,8 @@ function Gigasecond(date) {
 }
 
 Gigasecond.prototype.date = function() {
-    var endDate =  new Date(this.startDate.getTime() + Math.pow(10, 12));
-    return new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
-}
+    var endDate =  new Date(this.startDate.getTime() + 1e12);
+    return new Date(endDate.setHours(0,0,0,0));
+};
 
 module.exports = Gigasecond;
