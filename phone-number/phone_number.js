@@ -1,4 +1,4 @@
-var PhoneNumber = function(phoneNumber) {
+function PhoneNumber(phoneNumber) {
     area = phoneNumber.substring(0, 3),
     exchange = phoneNumber.substring(3, 6),
     suffix = phoneNumber.substring(6, 10),
